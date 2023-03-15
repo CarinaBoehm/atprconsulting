@@ -89,22 +89,6 @@ function Seminare() {
           </table>
         </article>
       </section>
-      <div className="dots">
-        <div className="dot"></div>
-        <div className="dot"></div>
-        <div className="dot"></div>
-      </div>
-
-
-{/* 
-      <section className="section kundenorientierung">
-        <h3>Kundenorientierung</h3>
-        <p>
-          Der Kunde ist König heißt es seit gefühlter Ewigkeit. Doch wie so oft bleib es beim bloßen Lippenbekenntnis. Über die gewünschte Steigerung der Kundenorientierung wird aus Sicht des Empfängers der jeweiligen Leistung, des Käufers oder des Klienten also, oftmals anders, für das Unternehmen oder die Organisation viel nachteiliger geurteilt. Das allgemein Empfundene ist vielmehr eine Verschlechterung von dem, was man sich als verbessert erhofft hatte. Loyalitäten und Empfehlungen der Kunden schwinden. Ursache für das Scheitern einer gewollten, kundenorientierten Ausrichtung betrieblicher Prozesse ist die Abwesenheit eines integrativen Konzeptes zur Durchsetzung der Kundenorientierung im realen Unternehmenskontext. Es fehlt schlichtweg eine Verknüpfung von einzelnen, kundenorientierten Maßnahmen, die singulär und nicht in die Prozesswelt der Organisation eingebunden verbleiben. Dabei ist die Kundenorientierung ein maßgebender Erfolgsfaktor und hat für die Betriebswirtschaftslehre lange schon einen dogmatischen¹ Neuansatz begründen können, etwa in Form des Lean-Management-Konzeptes², Kaizen (übersetzt als Veränderung zum
-          Besseren) oder auch im Geschäftsprozessmanagement.
-        </p>
-      </section> */}
-
     </main>
   );
 }

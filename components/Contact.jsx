@@ -1,110 +1,110 @@
 import Header from "./Header";
-import {useState} from 'react'
+import React from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 
 function Contact(){
 
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [text, setText] = useState("");
-    const [email, setEmail] = useState("");
-
-    const handleSubmit = async (e) => {
-        //prevents to rerender the page
-            e.preventDefault();
-        
-            let res = await fetch("https://httpbin.org/post",{
-                method: "POST",
-                body: JSON.stringify({
-                    firstName: firstName,
-                    lastName: lastName,
-                    email: email,
-                    text: text
-                })
-            });
-            if(res.status === 200){
-            setFirstName("");  
-            setLastName("");
-            setEmail("");
-            setText("");
-            }
-        }
+    const [state, handleSubmit] = useForm("mbjekwrp");
+    if (state.succeeded) {
+        return (
+            <section  className="confimation">
+                <Header/>
+                <article>
+                    <h2>Vielen Dank! Wir antworten so schnell wie möglich auf Ihr Anliegen.</h2>
+                </article>
+            </section>
+        )
+    }
 
     return(
         <main className="contact">
             <Header/>
             <section className="section contactOne">
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} >
                     <div className="formItem">                
-                        <label htmlFor="Firma">Organization</label>
+                        <label htmlFor="organization">Organization</label>
                         <div className="line2"/>
                         <input 
-                            id="LastName"  
+                            id="organization"
                             type="text"
-                            value={lastName} 
-                            placeholder="Insert Companyname"
-                            onChange={(event) => {
-                                setLastName(event.target.value);
-                            }}
-                            autoComplete="family-name" 
+                            name="organization"
+                            placeholder="Insert Companyname" 
+                        />
+                        <ValidationError 
+                            prefix="Organization" 
+                            field="organization"
+                            errors={state.errors}
                         />
                     </div>
                     <div className="formItem">                
-                        <label htmlFor="Fullname">Fullname</label>
+                        <label htmlFor="fullname">Fullname</label>
                         <div className="line2"/>
                         <input 
-                            id="FirstName" 
-                            type="text" 
-                            value={firstName} 
-                            placeholder=""
-                            onChange={(event) => {I
-                                setFirstName(event.target.value);
-                            }} 
-                            autoComplete="given-name"/>
+                            id="fullname"
+                            type="text"
+                            name="fullname"
+                            placeholder="Insert your name"
+                            required
+                        />
+                        <ValidationError 
+                            prefix="Fullname" 
+                            field="fullname"
+                            errors={state.errors}
+                        />
+
                     </div>
                     <div className="formItem">
                         <label htmlFor="Email">E-mail</label>
                         <div className="line2"/>
                         <input 
-                            id="Email" 
+                            id="email"
                             type="email"
-                            value={email}
+                            name="email"
                             placeholder="gandalf@mustermann.com"
-                            onChange={(event) => {
-                                setEmail(event.target.value);
-                            }}
-                            autoComplete="email" 
+                            required
+                        />
+                        <ValidationError 
+                            prefix="Email" 
+                            field="email"
+                            errors={state.errors}
                         />
                     </div>
                     <div className="formItem">                
-                        <label htmlFor="FirstName">Phone</label>
+                        <label htmlFor="phone">Phone</label>
                         <div className="line2"/>
                         <input 
-                            id="FirstName" 
+                            id="phone"
+                            name="phone" 
                             type="text" 
                             placeholder="optinal"
-                            value={firstName} 
-                            onChange={(event) => {I
-                                setFirstName(event.target.value);
-                            }} 
-                            autoComplete="given-name"/>
+                        />
+                        <ValidationError 
+                            prefix="Phone" 
+                            field="phone"
+                            errors={state.errors}
+                        />
+                            
                     </div>
                     <div className="formItem">
                         <label htmlFor="Text">Your Message</label>
-                                                <div className="line2"/>
+                        <div className="line2"/>
                         <input 
-                            id="text" 
+                            id="message"
+                            name="message" 
                             type="text" 
                             placeholder="Tell us what you need..."
-                            value={text} 
-                            onChange={(event) => {
-                                setText(event.target.value);
-                            }}
-                            autoComplete="text"
+                            required
+                        />
+                        <ValidationError 
+                            prefix="Message" 
+                            field="message"
+                            errors={state.errors}
                         />
                     </div>
                     <div className="btnSec">
-                        {/* <p>If you want you can call us: <a href="">015788804193</a> <span>weekdays 8-16Uhr</span> </p> */}
-                        <input className="submitBtn" type="submit" value="Submit" />
+                        <button type="submit" disabled={state.submitting}>
+                            Submit
+                        </button>                    
                     </div>
 
                 </form>

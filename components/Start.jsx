@@ -18,7 +18,7 @@ function Start() {
       <section className="section startOne">
         <article>
           <h3>
-            Studien und Praxis machen es offenkundig: Für die erfolgreiche
+            Studien und Praxis machen es offenkundig: <br /> Für die erfolgreiche
             Etablierung und Nachhaltigkeit von Verbesserung und Wandel braucht
             es ein Ineinandergreifen beider Komponenten.
           </h3>
@@ -33,12 +33,7 @@ function Start() {
         </article>
       </section>
 
-      {/* <div className="trans"></div> */}
-
       <Slideshow/>
-
-
-      {/* <div className="trans"></div> */}
 
       <section className="section startThree">
         <p>
