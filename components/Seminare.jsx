@@ -41,15 +41,15 @@ function Seminare() {
           <table>
           <tr>
             <td><Link to="/glossar" className="links" >Data Literacy and Artificial Intelligence</Link>  </td>
-            <td> .-€</td>
+            <td>nach Absprache</td>
           </tr>
           <tr>
             <td><Link to="/glossar" className="links">Business Intelligence Analytics mit Microsoft Power BI</Link> </td>
-            <td> .-€</td>
+            <td>nach Absprache</td>
           </tr>
           <tr>
             <td><Link to="/glossar" className="links">Big Data Management and Cloud Computing</Link> </td>
-            <td> .-€</td>
+            <td>nach Absprache</td>
           </tr>
         </table>
         </article>
@@ -63,7 +63,7 @@ function Seminare() {
             </tr>
             <tr>
               <td>Digitale Transformation</td>
-              <td>.-€</td>
+              <td>nach Absprache</td>
             </tr>
             <tr>
               <td>Change-Management</td>
@@ -79,7 +79,7 @@ function Seminare() {
             </tr>
             <tr>
               <td>Einführung in die Kosten- und Leistungsrechnung</td>
-              <td>.-€</td>
+              <td>nach Absprache</td>
             </tr>
             <tr>
               <td>Fortbildung zum Officer for Digital Transformation</td>

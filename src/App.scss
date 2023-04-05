@@ -18,7 +18,7 @@ $radius: 3px 3px 3px 3px;
 $radius2: 7px 7px 7px 7px;
 
 .eyecatcher{
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -38,7 +38,7 @@ $radius2: 7px 7px 7px 7px;
     border-radius: 7px 3px 7px 3px;
     color: $primary-color;
     font-weight: bolder;
-    text-shadow: 3px 3px 7px  black;
+    text-shadow: 3px 3px 7px black;
     position: relative;
     top: 79%;
     left: 73%;
@@ -55,7 +55,7 @@ $radius2: 7px 7px 7px 7px;
     cursor: pointer;
   }
     
-  }
+}
 .section{
   display: flex;
   flex-wrap: wrap;
@@ -63,7 +63,6 @@ $radius2: 7px 7px 7px 7px;
   line-height: 170%;
   @media (min-width:768px){
     padding: 3rem 3rem;
-
   }
 }
 .line{
@@ -205,9 +204,8 @@ footer{
       padding: 3rem 7rem ;
       font-size: 1.1rem;
       line-height: 200%;
-      @media (min-width:768px){
-        padding: 3rem 17rem ;
-        
+      @media (min-width:1440px){
+        padding: 3rem 11rem ;
       }
     }
   }
@@ -403,17 +401,17 @@ footer{
   background-image: url(./assets/background1.png);
   background-size: cover;
   color: $primary-color;
-  section{
+  .info{
     padding: 3rem 3rem;
     width: 80%;
     margin: auto;
     line-height: 170%;
-  }
-  h3{
-    margin-top: 1.7rem;
-  }
-  .line{
-    margin: 1rem 0;
-    width: 19%;
+    h3{
+      margin-top: 1.7rem;
+    }
+    .line{
+      margin: 1rem 0;
+      width: 19%;
+    }
   }
 }
