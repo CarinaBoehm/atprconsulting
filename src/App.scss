@@ -1,0 +1,417 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+/* Grundstuff */
+$primary-color: white;
+$sec-color: rgb(99, 51, 12);
+$terz-color: #ff8000;
+$quad-color:rgba(255, 115, 22, 0.404);
+$gradient: linear-gradient(55deg, rgba(115,59,26,1) 38%, rgba(255,159,103,1) 90%, rgba(207,121,71,1) 100%);
+$gradient2: linear-gradient(55deg, rgba(115,59,26,1) 68%, rgba(255,159,103,1) 99%, rgba(207,121,71,1) 100%);
+$text-shadow: 1px 1px 7px  rgba(0, 0, 0, 0.418);
+$radius: 3px 3px 3px 3px;
+$radius2: 7px 7px 7px 7px;
+
+//  rgba(255, 115, 22, 0.404)
+// ff8000
+// ff8c00
+// ff9900
+// ffa600
+
+.eyecatcher{
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  .headline{
+    color: $primary-color;
+    text-align: right;
+    text-shadow: $text-shadow;
+    position: relative;
+    top: 42%;
+    right: 7%;
+  }
+  button{
+    padding: 1rem;
+    background: none;
+    border: 1px solid $primary-color;
+    border-radius: 7px 3px 7px 3px;
+    color: $primary-color;
+    font-weight: bolder;
+    text-shadow: 3px 3px 7px  black;
+    position: relative;
+    top: 79%;
+    left: 73%;
+    @media (min-width: 768px){
+        top: 69%;
+        left: 81%;
+    }
+    @media (min-width: 1024px) {
+        left: 89%;
+        font-size: larger;
+    }
+  }
+  button:hover{
+    cursor: pointer;
+  }
+    
+  }
+.section{
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 13vh;
+  line-height: 170%;
+  @media (min-width:768px){
+    padding: 3rem 3rem;
+
+  }
+}
+.line{
+  background: rgb(255,128,0);
+  background: linear-gradient(49deg, rgba(255,128,0,1) 0%, rgba(255,128,0,1) 32%, rgba(0,0,0,1) 35%, rgba(255,128,0,1) 38%, rgba(255,128,0,1) 65%, rgba(0,0,0,1) 68%, rgba(255,128,0,1) 71%, rgba(255,128,0,1) 100%);
+  height: 1px;
+  outline: none;
+}
+.line2{
+  background: rgb(255,128,0);
+  height: 1px;
+}
+
+/* Header */
+
+.header{
+  text-shadow: 1px 1px 7px  black;
+  color: $primary-color;
+  .logo{
+    margin-left: 1rem;
+  }
+  .navlist, .navlistitem{
+    font-family: 'Times New Roman', Times, serif;
+    display: none;
+  }
+
+  @media (min-width: 768px){
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    font-weight: 700;
+    .navlist{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 7vh;
+      width: 50%;
+      background: none;
+      list-style-type: none;
+      .navlistitem{
+          display: block;
+          text-decoration: none;
+          font-size: 1.2rem;
+          color: white;
+        }
+    }
+  }
+  .logo{
+    align-items: center;
+    span{
+      font-size: 0.7rem;
+    }
+  }
+}
+
+
+
+/* Footer */ 
+
+footer{
+  position: relative;
+  bottom: 0;
+  min-height: 13vh;
+  padding: 1rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: white;
+  background-color: rgb(34, 33, 33);
+  .footerLogo{
+    p{
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 1.7rem;
+    }
+    span{
+      font-size: .9rem;
+      color: rgb(164, 157, 157);
+      transition: transform .5s ease;
+    }
+    span:hover{
+      cursor: pointer;
+      transform: scale(1.7);
+    }
+  }
+  ul{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    li, .footerItem{
+      justify-content: space-around;
+      padding: 1em 1em;
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+}
+
+/* Startseite */
+
+.start{
+  .eyecatcher{
+    background-image: url(./assets/aerial-view-of-a-business-team.jpg);
+  }
+  .startOne{
+    justify-content: center;
+    align-items: center;
+    background: rgb(115,59,26);
+    background: rgb(115,59,26);
+    background: linear-gradient(55deg, rgba(115,59,26,1) 38%, rgba(255,159,103,1) 90%, rgba(207,121,71,1) 100%);
+    // background: rgb(207,121,71);
+    // background: rgb(207,121,71);
+    // background: linear-gradient(50deg, rgba(207,121,71,1) 0%, rgba(255,159,103,1) 4%, rgba(115,59,26,1) 10%, rgba(115,59,26,1) 27%, rgba(115,59,26,1) 80%, rgba(115,59,26,1) 80%, rgba(255,159,103,1) 90%, rgba(207,121,71,1) 100%);
+    color: $primary-color;
+    article{
+      width: 70%;
+      font-size: 1.1rem;
+      line-height: 200%;
+      padding: 7rem 0;
+      p{
+        padding-top: 3rem;
+      }
+    }
+  }
+  .startTwo{
+    .slider{
+      height: 30vh;
+      color: white;
+      div{
+        // background-color: $sec-color;
+        font-weight: 600;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .trans{
+    width: 100%;
+    height: 7vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url(./assets/coworkers-team-brainstorming.jpg);
+  }
+  .startThree{
+    justify-content: center;
+    align-items: center;
+    background: $gradient2;
+    color: $primary-color;
+    p{
+      padding: 7rem 3rem;
+      font-size: 1.1rem;
+      line-height: 200%;
+    }
+  }
+}
+
+
+/* Seminare */
+
+.seminare{
+  background-image: url(./assets/background1.png);
+  background-size: cover;
+  color: $primary-color;
+  .eyecatcher{
+    background-image: url(./assets/startup-593341.jpg);
+  }
+  .seminareOne{
+    justify-content: center;
+    p{
+      padding: 3rem 3rem;
+      line-height: 200%;
+      font-size: 1.1rem;
+    }
+  }
+  .seminarTwo{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    .offers{
+      padding: 1.7rem 1.7rem;
+      width: 600px;
+      // background-color: $terz-color;
+      h3{
+        padding-bottom: 1.3rem;
+        margin-left: 1.7rem;
+      }
+
+      table{
+        line-height: 210%;
+        font-size: 1.2rem;
+        padding: 1.7rem 1.5rem;
+        width: 100%;
+        tr{
+          display: flex;
+          justify-content: space-between;
+        .links{
+          color: white;
+          text-decoration: none;
+        }
+        }
+      }
+    }
+  }
+  .seminareThree{
+    justify-content: end;
+  }
+}
+
+// About
+
+.about{
+  background-image: url(./assets/ausschnitt.png);
+  background-size: cover;
+  min-height: 87vh;
+  color: $primary-color;
+  line-height: 310%;
+  .vorstellung{
+    display: flex;
+    justify-content: center;
+    article{
+      width: 300px;
+      padding: 1rem;
+      margin: 1rem;
+      color: $primary-color;
+      background-color: $quad-color;
+      box-shadow: $text-shadow;
+      text-shadow: $text-shadow;
+      h3{
+        padding-bottom: 1rem;
+      }
+      p{
+        border-bottom: 1px solid $primary-color;
+        margin-bottom: 2rem;
+      }
+      ul{
+        margin-left: 1rem;
+      }
+    }
+  }
+  .aboutText{
+    padding: 1.7rem;
+    font-size: larger;
+  }
+}
+
+
+// Contact
+
+.contact{
+  height: 77vh;
+  background-image: url(./assets/startup-593341.jpg);
+  @media (min-width:768px) {
+    height: 87vh;
+  }
+  .contactOne{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2%;
+    color: $primary-color;
+    form{
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+      justify-content: center;
+      width: 350px;
+      padding: 2% 2%;
+      border-radius: $radius;
+      background-color: rgba(50, 48, 48, 0.708);
+      .formItem{
+        display: flex;
+        flex-direction: column;
+        padding: .3rem 1rem;
+        .line2{
+          width: 37%;
+        }
+        input{
+          background: none;
+          outline: none;
+          border: none;
+          margin-top: .3rem;
+          line-height: 200%;
+        }
+        input:focus{
+          border: 1px solid #ff8000;
+          border-radius: $radius;
+        }
+        #text{
+          min-height: 100px;
+        }
+      }
+      .btnSec{
+        display: flex;
+        justify-content: right;
+        
+        .submitBtn{
+          padding: 1rem;
+          margin-top: 13px;
+          background: none;
+          border: 1px solid $primary-color;
+          border-radius: 7px 3px 7px 3px;
+          color: $primary-color;
+          font-weight: bolder;
+          text-shadow: 3px 3px 7px  black;
+        }
+      }
+    }
+  }
+}
+
+// Impressum
+
+.impressum{
+  background-image: url(./assets/background1.png);
+  background-size: cover;
+  color: $primary-color;
+  .contentbox{
+    padding: 1rem 7rem;
+    // margin-bottom: 10rem;
+    
+  }
+}
+
+// Glossar
+
+.glossar{
+  background-image: url(./assets/background1.png);
+  background-size: cover;
+  color: $primary-color;
+  section{
+    padding: 3rem 3rem;
+    width: 80%;
+    margin: auto;
+    line-height: 170%;
+  }
+  h3{
+    margin-top: 1.7rem;
+  }
+  .line{
+    margin: 1rem 0;
+    width: 19%;
+  }
+}
