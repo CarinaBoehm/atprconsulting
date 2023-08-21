@@ -88,13 +88,12 @@ function Seminare() {
               <td>Fortbildung zum Officer for Digital Transformation</td>
               {/* <td>325€</td> */}
             </tr>
+            <tr>
+              <td>Preise auf Anfrage</td>
+            </tr>
 
           </table>
         </article>
-      </section>
-
-      <section className="section seminarThree">
-        <p>Preise auf Anfrage.</p>
       </section>
 
     </main>
